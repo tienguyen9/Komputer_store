@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Komputer Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="getComputers()">
+<div class="navtop">
+    <h1 class="navitem">Komputer Store</h1>
+</div>
+
+<div class="row justify-content-between">
+    <div class="col box bg-secondary bank">
+        <h3>Joe Banker</h3>
+        <table class="t1">
+            <col width="300px" />
+            <col width="10px" />
+            <tr>
+                <td>Balance</td>
+                <td id="balanceBank">0</td>
+                <td>Kr</td>
+            </tr>
+            <tr>
+                <td id="outstandingRow"></td>
+                <td id="outstandingAmount"></td>
+                <td id ="outstandingKr"></td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-success" onclick="loanDialog()">Get a loan</button>
+    </div>
+    <div class="col box bg-secondary">
+        <h3>Work</h3>
+        <table class="t1">
+            <tr>
+                <td>Pay</td>
+                <td style="width:20px"></td>
+                <td id="balanceWork">0</td>
+                <td></td>
+                <td>Kr</td>
+            </tr>
+        </table>
+        <button id= "repay" type="button" class="btn btn-danger" onclick="repayLoan()">Repay Loan</button>
+        <button type="button" class="btn btn-warning" onclick="bankWorkMoney()">Bank</button>
+        <button type="button" class="btn btn-primary" onclick="work()">Work</button>
+    </div>
+    <div class="col box bg-secondary">
+        <h3>Laptops</h3>
+        <label for="laptops">Choose a laptop:</label>
+        <select name="laptops" id="laptops" onchange="updateLaptopView()">
+        </select>
+        <br><br>
+    </div>
+</div>
+
+<div class="row justify-content-between col box bg-secondary parent ">
+    <div id="img_home" class = "lapimg" ></div>
+    <div class="lapdata" id = "currentLaptop">
+    </div>
+    <div class = "price">
+
+        <p class = "float-end">  Kr </p>
+        <p id = "price" class = "float-end"></p><br><br>
+        <button type="button" class="btn btn-info float-end" onclick="buyLaptop()">BUY NOW</button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.navtop {
+    background-color: black;
+    overflow: hidden;
+}
+
+.navitem{
+    color: white;
+
+}
+
+.box{
+    margin: 50px ;
+}
+
+.t1 {
+    empty-cells: show;
+}
+
+.lapdata{
+    flex: 1;
+
+}
+
+.lapimg{
+    flex: 1;
+
+}
+
+.price{
+    flex: 1;
+}
+
+
+table.bank { table-layout:fixed; }
+table.bank td { overflow: hidden; }
